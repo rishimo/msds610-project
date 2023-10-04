@@ -68,9 +68,9 @@ To run these SQL queries, you need access to a relational database system (e.g.,
   
 
 
-The results of each join are saved in the `inner_join`, `left_join`, and `outer_join` CTEs. You can view the results by selecting from these CTEs. The output includes relevant employee and project information based on the type of join performed.
+- The results of each join are saved in the `inner_join`, `left_join`, and `outer_join` CTEs. You can view the results by selecting from these CTEs. The output includes relevant employee and project information based on the type of join performed.
 
-  example: outer join
+  **Example: outer join**
   
   ```sql
   SELECT * FROM outer_join
