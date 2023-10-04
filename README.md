@@ -14,8 +14,14 @@ To run these SQL queries, you need access to a relational database system (e.g.,
 ### Data and Code Overview
 
 - `employee`: Contains information about employees, including `employee_id`, `employee_name`, `department`, and `position`.
+  
+  ![kitPzNJ0OscLYEk3fXnWMcStJKadPjaaxwt8Don-omHqicSEs8juY59BHs_AgdZXtNbywa43t7MEg79-icbyYMsp_xJMJ-KlwguDnNdpC4gvFIoX-iWOZaqj3m8e](https://github.com/rishimo/msds610-project/assets/138905247/3bd791ba-611d-4465-8227-759ce8171002)
+
 
 - `project`: Contains information about projects, including `project_id`, `project_name`, `pic_id` (person in charge), `supervisor_id`, and `status`.
+
+  ![Pkkx0Nk609T-0wJwxw73X2rotIWAIU7IrCrSFORdpCp1kZY_sxO-kPyfaQQwklvzr2H9rwv5mytEwq7ib2C2u0CLlkDJkAwXDuv1XmWgmuXUJ2SiXrZ_C1uPRRzr](https://github.com/rishimo/msds610-project/assets/138905247/aaf738f7-0d8c-4940-ab1b-8d6e05cf8500)
+
 
 - The code includes three SQL queries: inner join, left join, and outer join. These queries combine data from the `employee` and `project` tables based on common keys.
   
