@@ -3,11 +3,13 @@ Repository for MSDS610 Communications for Analytics final project.
 
 This project demonstrates the use of different types of join to analyze employee and project data. It involves three primary SQL operations: inner join, left join, and outer join. 
 
+<br>
 
 ## Getting Started
 
 To run these SQL queries, you need access to a relational database system (e.g., PostgreSQL, MySQL) and a database containing tables named `employee` and `project`. You can set up a database and run these queries using SQL client tools or by pasting them into a SQL script.
 
+<br>
 
 
 ## Data and Code Overview
@@ -24,7 +26,7 @@ To run these SQL queries, you need access to a relational database system (e.g.,
 
 - The code includes three SQL queries: inner join, left join, and outer join. These queries combine data from the `employee` and `project` tables based on common keys.
 
-
+<br>
   
 
 ## SQL Queries
@@ -66,9 +68,9 @@ To run these SQL queries, you need access to a relational database system (e.g.,
   )
   ```
   
+<br>
 
-
-- The results of each join are saved in the `inner_join`, `left_join`, and `outer_join` CTEs. You can view the results by selecting from these CTEs. The output includes relevant employee and project information based on the type of join performed.
+The results of each join are saved in the `inner_join`, `left_join`, and `outer_join` CTEs. You can view the results by selecting from these CTEs. The output includes relevant employee and project information based on the type of join performed.
 
   **Example: outer join**
   
@@ -79,15 +81,15 @@ To run these SQL queries, you need access to a relational database system (e.g.,
 
 ## Result
 
-- **Inner Join**:
+- **Inner Join**: Shows all employees with corresponding projects
 
   ![VxnAJxLVPqtzNiDcr7d9r3iB97Oa_KBw8BDvkHlGGZPCTRQT4noN9T6RPOUEw-67uPqNK1V_9ujOKIoiEy-lHfr6CjtM7h8sa52QmQEyoNXp-SbMXOmaou2rFe5S](https://github.com/rishimo/msds610-project/assets/138905247/fa831f14-3f75-4d8d-9181-52edc93304d6)
 
-- **Left Join**:
+- **Left Join**: Can include employee that doesn't have the current project
 
   ![eHLM0XmpFxKXvU3gne46u6rN1ZhUSB_BxoqqQ_kMd9NfMqltHIac-WH6v4OQBlLbglXs5QV4P0DCOCyEnrUxc7PMFPhe1-4571hL35k_xTzt8KywRxT8OmRuZxIU](https://github.com/rishimo/msds610-project/assets/138905247/a160970d-9764-40cf-94b3-7458ebd4b859)
 
-- **Outer Join**:
+- **Outer Join**: Can see who is available and which project is not yet taken
 
   ![tg3wN5_le5t6Z4UA1Gq5DbWYKvlb3afKBE2C88I1xSaRdUk9qC-99r7ziwzsXK1vigh6QPMTvqfhz7Lr_rYEpLW2OJVRDK85QkXO2bWCjkqsCy3gtp08vxrI8efo](https://github.com/rishimo/msds610-project/assets/138905247/2a0aa1b1-577f-4ea1-9c2f-47c68ac87cd0)
 
