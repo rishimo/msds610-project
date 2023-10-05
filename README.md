@@ -3,6 +3,8 @@ Repository for MSDS610 Communications for Analytics final project.
 
 This project demonstrates the use of different types of join to analyze employee and project data. It involves three primary SQL operations: inner join, left join, and outer join. 
 
+[Presentation Link](https://docs.google.com/presentation/d/1qDhv6hP0t6VA9dvkX2FX_tRjgmxpXe5bjN7hRmDjkrc/edit?usp=sharing)
+
 <br>
 
 ## Getting Started
