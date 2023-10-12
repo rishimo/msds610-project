@@ -94,7 +94,106 @@ The results of each join are saved in the `inner_join`, `left_join`, and `outer_
 - **Outer Join**: Can see who is available and which project is not yet taken
 
   ![tg3wN5_le5t6Z4UA1Gq5DbWYKvlb3afKBE2C88I1xSaRdUk9qC-99r7ziwzsXK1vigh6QPMTvqfhz7Lr_rYEpLW2OJVRDK85QkXO2bWCjkqsCy3gtp08vxrI8efo](https://github.com/rishimo/msds610-project/assets/138905247/2a0aa1b1-577f-4ea1-9c2f-47c68ac87cd0)
+<br><br>
+
+# Joins Efficiency Comparison
+In this part, we will discuss the runtime inefficient query and efficient query with different joins in `joins.ipynb`
+
+[Presentation Link](https://docs.google.com/presentation/d/1ljeMe_fyJH4C1UAFj35-uoRDrJcZfBPjQjqXeRkjyVs/edit?usp=sharing)
+
+<br>
+
+## Getting Started
+
+To run these SQL queries, you need access to a relational database system (e.g., PostgreSQL, MySQL). In this part, we will use `psycopg` to access PostgreSQL.
+We first import the modules we need.
+
+```python
+  import psycopg
+  import time
+  import pandas as pd
+  ```
+<br>
+Then, we connect the database with `psycopg`.
+
+```python
+user = 'postgres'
+host = 'localhost'
+dbname = 'msds691_HW'
+
+with psycopg.connect(f"user='{user}' \
+                         host='{host}' \
+                         dbname='{dbname}'") as conn:
+        with conn.cursor() as curs:
+            # use the query you want here            
+```
+<br>
+
+To analyze runtime, we will use `%%time` in each code block.
+
+## Data Overview
+
+- `incident_type`: Contains information about incident type, including `incident_code`, `incident_category`, `incident_subcategory`, and `incident_description`.
+  
+  <img width="697" alt="image" src="https://github.com/rishimo/msds610-project/assets/138905247/3e96d876-e1fd-4d43-a3cc-96996c0c0285">
 
 
 
+- `incient`: Contains information about incidnet, including `incident_id`, `incident_datetime`, `report_datetime`, `longtitude`, `latitude`, `report_type_code` and `incident_code`.
+
+  <img width="883" alt="image" src="https://github.com/rishimo/msds610-project/assets/138905247/197193ff-7def-4f7d-b5a1-5ddf03e9dcf0">
+  
+
+- `location`: Contains information about location, including `longtitude`, `latitude`, `supervisor_district`, `police_district` and `analysis_neighborhood`.
+
+  <img width="663" alt="image" src="https://github.com/rishimo/msds610-project/assets/138905247/10ec577e-31e9-4501-a772-0711927868b1">
+
+
+- `report_type`: Contains information about report type, including `report_type_code`, and `report_type_description`.
+  
+  <img width="306" alt="image" src="https://github.com/rishimo/msds610-project/assets/138905247/8b57e8d6-2984-45a6-8af6-6d3a9aaa76bb">
+
+
+<br>
+
+## Result
+Here are the results of runtime comparison of efficent and inefficent query.
+
+- **Basic Join**
+  - Inefficient (without joins)
+    ```
+    CPU times: user 508 ms, sys: 121 ms, total: 629 ms
+    Wall time: 1.4 s
+    ```
+  - Efficient
+    ```
+    CPU times: user 473 ms, sys: 107 ms, total: 580 ms
+    Wall time: 771 ms
+    ```
+  
+- **Inner Join**
+  - Inefficient (without joins)
+    ```
+    CPU times: user 556 ms, sys: 107 ms, total: 664 ms
+    Wall time: 1.52 s
+    ```
+  - Efficient
+    ```
+    CPU times: user 544 ms, sys: 103 ms, total: 647 ms
+    Wall time: 1.05 s
+    ```
+
+- **Outer Join**
+  - Inefficient (without joins)
+    ```
+    CPU times: user 546 ms, sys: 100 ms, total: 646 ms
+    Wall time: 1.41 s
+    ```
+  - Efficient
+    ```
+    CPU times: user 547 ms, sys: 104 ms, total: 651 ms
+    Wall time: 796 ms
+    ```
+    
+We can see that there's much more faster when we're using join!
 
